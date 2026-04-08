@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/build_stages_graph"
+    app:startDestination="@id/buildStagesLoadFragment">
+
+    <fragment
+        android:id="@+id/buildStagesLoadFragment"
+        android:name="com.buidlsta.stagebuisla.xcv.presentation.ui.load.BuildStagesLoadFragment"
+        android:label="BuildStagesLoadFragment" >
+        <action
+            android:id="@+id/action_buildStagesLoadFragment_to_buildStagesV"
+            app:destination="@id/buildStagesV"
+            app:popUpTo="@id/build_stages_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/buildStagesV"
+        android:name="com.buidlsta.stagebuisla.xcv.presentation.ui.view.BuildStagesV"
+        android:label="BuildStagesV" />
+</navigation>
